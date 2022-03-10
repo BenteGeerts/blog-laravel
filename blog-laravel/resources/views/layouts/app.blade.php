@@ -4,6 +4,7 @@
     <title>{{config("app.name")}}</title>
 </head>
 <body>
+    @include("navbar")
     <div class="container">
     @yield("content")
     </div>
