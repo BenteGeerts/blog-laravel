@@ -1,9 +1,7 @@
-<html>
-<head>
-    <title>{{config("app.name")}}</title>
-</head>
-<body>
+@extends("layouts.app")
+
+@section("content")
 <h1>This is the index page</h1>
 <p>Welcome</p>
-</body>
-</html>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ratione?</p>
+@endsection
