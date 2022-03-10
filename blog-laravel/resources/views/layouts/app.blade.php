@@ -1,9 +1,12 @@
 <html>
 <head>
+    <link rel="stylesheet" href="css/app.css">
     <title>{{config("app.name")}}</title>
 </head>
 <body>
-    @yield("content");
+    <div class="container">
+    @yield("content")
+    </div>
 </body>
 </html>
 
