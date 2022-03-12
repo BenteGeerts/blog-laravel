@@ -81,7 +81,15 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, ["title"=>"required",
+            "content"=>"required"]);
+
+        $post = Post::find($id);
+        $post->title = $request->input("title");
+        $post->content = $request->input("content");
+        $post->save();
+
+        return redirect("/posts")->with("success", "Post updated");
     }
 
     /**
