@@ -2,7 +2,7 @@
 
 @section("content")
     <h1>Edit post</h1>
-    <form method="POST" action="{{route("posts.store")}}">
+    <form method="POST" action="{{route("posts.edit", $post->id)}}">
         <div class="form-group">
             @csrf
             <label for="title">Title</label>
