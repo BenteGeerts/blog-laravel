@@ -2,7 +2,7 @@
 
 @section("content")
     <h1>Create post</h1>
-    <form method="POST" action="{{route("posts.store")}}">
+    <form method="post" action="/posts">
         <div class="form-group">
             @csrf
             <label for="title">Title</label>
