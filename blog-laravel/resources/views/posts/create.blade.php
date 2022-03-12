@@ -2,9 +2,9 @@
 
 @section("content")
     <h1>Create post</h1>
-    <form method="POST" action="/posts">
+    <form method="POST" action="{{route("posts.store")}}">
         <div class="form-group">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            @csrf
             <label for="title">Title</label>
             <input type="text" class="form-control" placeholder="Enter title">
         </div>

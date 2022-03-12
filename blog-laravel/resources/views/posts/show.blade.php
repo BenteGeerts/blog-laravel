@@ -7,4 +7,6 @@
         {{$post->content}}
     </div>
     <a href="/posts" class="btn btn-primary">Go back</a>
+    <hr>
+    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
 @endsection
