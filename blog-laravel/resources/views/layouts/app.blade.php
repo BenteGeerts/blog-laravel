@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
     <title>{{config("app.name")}}</title>
 </head>
 <body>
