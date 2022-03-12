@@ -2,7 +2,7 @@
 
 @section("content")
     <h1>Create post</h1>
-    <form>
+    <form action="" method="post" action="{{ route('posts.store') }}">
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control" placeholder="Enter title">
