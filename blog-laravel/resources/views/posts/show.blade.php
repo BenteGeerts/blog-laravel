@@ -6,5 +6,5 @@
     <div>
         {{$post->content}}
     </div>
-    <a href="/post" class="btn btn-primary">Go back</a>
+    <a href="/posts" class="btn btn-primary">Go back</a>
 @endsection
