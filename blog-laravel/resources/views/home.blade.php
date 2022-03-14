@@ -35,7 +35,6 @@
                                 </tr>
                             @endforeach
                         </table>
-                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>

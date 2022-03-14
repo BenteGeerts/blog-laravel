@@ -7,7 +7,7 @@
             <div class ="card">
                 <ul>
                     <a href="/posts/{{$post->id}}"><li>{{$post->title}}</li></a>
-                    <li>{{$post->content}}</li>
+                    {{$post->content}}<br>
                     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
                 </ul>
             </div>

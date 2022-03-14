@@ -18,11 +18,11 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/posts">Blogposts</a>
                     </li>
-
+                    @if(Auth::User())
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/posts/create">Create post</a>
                     </li>
-
+                    @endif
                 </ul>
 
 
@@ -48,12 +48,12 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/home">Dashboard</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a class="dropdown-item" href="/home">Dashboard</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
