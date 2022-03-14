@@ -22,6 +22,7 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/posts/create">Create post</a>
                     </li>
+
                 </ul>
 
 
@@ -52,7 +53,7 @@
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
+                            <a class="dropdown-item" href="/home">Dashboard</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
