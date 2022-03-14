@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LikesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Auth::routes();
 Route::get('/', [PageController::class, "index"]);
 Route::resource("posts", PostsController::class);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::put("/posts", [LikesController::class, "Like"])->name("likes.like");

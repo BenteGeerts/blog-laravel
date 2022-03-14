@@ -8,8 +8,16 @@
     <div>
         {{$post->content}}<br>
     @if(!Auth::guest())
-        <a href="">Like</a>
+
+
+        <form method="post" action="{{route("likes.like", $post->id, Auth::user()->id)}}">
+            @csrf
+            <button class="btn btn-primary">Like</button>
+        </form>
+
         @if(Auth::user()->id == $post->user_id)
+
+
     <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
     <hr>
     <form method="post" action="{{route("posts.destroy", $post->id)}}">
@@ -17,6 +25,8 @@
         <input type="hidden" value="delete" name="_method">
         <button class="btn btn-danger">Delete</button>
     </form>
+
+
         @endif
     @endif
 @endsection
