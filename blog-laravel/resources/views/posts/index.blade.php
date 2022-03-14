@@ -8,7 +8,7 @@
                 <ul>
                     <a href="/posts/{{$post->id}}"><li>{{$post->title}}</li></a>
                     <li>{{$post->content}}</li>
-                    <small>Written on {{$post->created_at}}</small>
+                    <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
                 </ul>
             </div>
         @endforeach

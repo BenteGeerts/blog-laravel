@@ -23,9 +23,15 @@
                             </tr>
                             @foreach($posts as $post)
                                 <tr>
-                                    <th>{{$post->title}}</th>
-                                    <th><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></th>
-                                    <th></th>
+                                    <td>{{$post->title}}</td>
+                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
+                                    <td><form method="post" action="{{route("posts.destroy", $post->id)}}">
+                                            @csrf
+                                            <input type="hidden" value="delete" name="_method">
+                                            <button class="btn btn-danger">Delete</button>
+                                        </form>
+
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
