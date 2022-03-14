@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
@@ -75,6 +76,12 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+
+        //check for correct user
+        if(Auth::user()->id != $post->user_id)
+        {
+            return redirect("/posts")->with("error", "Unauthorized page");
+        }
         return view("posts.edit")->with("post", $post);
     }
 
@@ -107,6 +114,11 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        //check for correct user
+        if(Auth::user()->id != $post->user_id)
+        {
+            return redirect("/posts")->with("error", "Unauthorized page");
+        }
         $post->delete();
         return redirect("/posts")->with("success", "Post removed");
     }
