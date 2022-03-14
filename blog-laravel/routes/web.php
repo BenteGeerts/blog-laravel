@@ -20,4 +20,4 @@ Auth::routes();
 Route::get('/', [PageController::class, "index"]);
 Route::resource("posts", PostsController::class);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::put("/posts", [LikesController::class, "Like"])->name("likes.like");
+Route::post("/posts/{post}", [LikesController::class, "like"])->name("likes.like");

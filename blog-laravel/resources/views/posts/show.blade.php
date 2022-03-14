@@ -10,7 +10,7 @@
     @if(!Auth::guest())
 
 
-        <form method="post" action="{{route("likes.like", $post->id, Auth::user()->id)}}">
+        <form method="post" action="{{route("likes.like", $post->id)}}">
             @csrf
             <button class="btn btn-primary">Like</button>
         </form>
