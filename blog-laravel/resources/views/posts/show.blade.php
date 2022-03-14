@@ -6,8 +6,9 @@
     <h1>{{$post->title}}</h1>
     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
     <div>
-        {{$post->content}}
+        {{$post->content}}<br>
     @if(!Auth::guest())
+        <a href="">Like</a>
         @if(Auth::user()->id == $post->user_id)
     <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
     <hr>
