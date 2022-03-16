@@ -9,12 +9,10 @@
         {{$post->content}}<br>
     @if(!Auth::guest())
 
-
         <form method="post" action="{{route("likes.like", $post->id)}}">
             @csrf
             <button class="btn btn-primary">Like</button>
         </form>
-
         @if(Auth::user()->id == $post->user_id)
 
 
