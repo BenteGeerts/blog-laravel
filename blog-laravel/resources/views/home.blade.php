@@ -23,7 +23,7 @@
                             </tr>
                             @foreach($posts as $post)
                                 <tr>
-                                    <td>{{$post->title}}</td>
+                                    <td><a href="/posts/{{$post->id}}">{{$post->title}}</a> </td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
                                     <td><form method="post" action="{{route("posts.destroy", $post->id)}}">
                                             @csrf

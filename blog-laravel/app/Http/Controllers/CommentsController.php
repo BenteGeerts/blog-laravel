@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentsController extends Controller
 {
+
     public function store(Request $request, $postId)
     {
         $this->validate($request, ["text"=>"required", "name"=>"required"]);

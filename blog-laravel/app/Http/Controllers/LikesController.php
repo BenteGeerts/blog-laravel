@@ -27,10 +27,4 @@ class LikesController extends Controller
         }
 
     }
-
-    public function Dislike(Request $request)
-    {
-
-    }
-
 }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer("user_id");
             $table->integer("post_id");
             $table->string("name");
-            $table->string("comment");
+            $table->longText("comment");
         });
     }
 

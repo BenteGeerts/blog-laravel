@@ -6,8 +6,8 @@
         @foreach($posts as $post)
             <div class ="card">
                 <ul>
-                    <a href="/posts/{{$post->id}}"><li>{{$post->title}}</li></a>
-                    {{$post->content}}<br>
+                    <a href="/posts/{{$post->id}}"><li><h5>{{$post->title}}</h5></li></a><br>
+                    <p>{{substr($post->content, 0, 50)}}...</p>
                     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
                 </ul>
             </div>

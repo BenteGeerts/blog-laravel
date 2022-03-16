@@ -3,6 +3,7 @@
     height: 50px;
     border-radius: 50%;
     float:left;
+    clear:left;
 }
 
 .author-name{
@@ -33,4 +34,5 @@
 
 .comment-title{
     margin-bottom: 30px;
+    clear:right;
 }
