@@ -32,6 +32,12 @@
                     <div class="comment-content">
                         {{$comment->comment}}
                     </div>
+                    @if(Auth::user()->id == $post->user_id)
+                        <form method="post" action="{{route("comments.destroy", $post->id)}}">
+                            @csrf
+                            <button>Delete</button>
+                        </form>
+                        @endif
                 </div>
                 <br>
             @endforeach

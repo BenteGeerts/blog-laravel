@@ -21,4 +21,11 @@ class CommentsController extends Controller
         $comment->save();
         return redirect(route("posts.show", $postId))->with("success", "Comment was added");
     }
+
+    public function destroy($postId)
+    {
+        $find = Comment::where(["post_id"=>$postId])->first();
+        $find->delete();
+        return redirect("/posts")->with("error", "Comment removed");
+    }
 }

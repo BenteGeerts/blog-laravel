@@ -23,3 +23,4 @@ Route::resource("posts", PostsController::class);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post("/posts/{post}", [LikesController::class, "like"])->name("likes.like");
 Route::post("comments/{post}", [CommentsController::class, "store"])->name("comments.store");
+Route::post("comments/delete/{post}", [CommentsController::class, "destroy"])->name("comments.destroy");
