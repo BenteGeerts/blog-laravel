@@ -2,7 +2,7 @@
 
 @section("content")
 <div class="container">
-    <a href="/posts" class="btn btn-primary">Go back</a>
+    <a href="/posts" class="btn btn-primary mb-3">Go back</a>
     <h1>{{$post->title}}</h1>
     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small><br><br>
 
@@ -12,7 +12,7 @@
         <form method="post" action="{{route("likes.like", $post->id)}}">
             @csrf
             @if(!App\Models\Like::where(['user_id' =>Auth::user()->id, "post_id"=>$post->id])->first())
-            <button class="btn btn-primary">Like</button>
+            <button class="btn btn-primary mb-2">Like</button>
             @else
                 <button class="btn btn-primary">Unlike</button>
                 @endif
@@ -47,7 +47,7 @@
                 <input name="name" class="form-control">
                 <label name="text" class="form-label">Comment</label>
                 <textarea type="text" name="text" class="form-control"></textarea><br>
-                <button type="submit" class="btn btn-success">Add comment</button>
+                <button type="submit" class="btn btn-success mb-3">Add comment</button>
             </form>
 
         @if(Auth::user()->id == $post->user_id)
