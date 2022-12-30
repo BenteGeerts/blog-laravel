@@ -4,7 +4,7 @@
     <h1>Posts</h1>
     @if(count($posts) >= 1)
         @foreach($posts as $post)
-            <div class ="card">
+            <div class ="card mb-4">
                 <ul>
                     <a href="/posts/{{$post->id}}"><li><h5 class="mt-3">{{$post->title}}</h5></li></a><br>
                     <p>{{substr($post->content, 0, 50)}}...</p>
